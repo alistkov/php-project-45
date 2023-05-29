@@ -4,8 +4,6 @@ namespace BrainGames\Even;
 
 use function BrainGames\Engine\startGame;
 
-const RULES = 'Answer "yes" if the number is even, otherwise answer "no".';
-
 function isEven($number): bool
 {
     return $number % 2 === 0;
@@ -13,6 +11,7 @@ function isEven($number): bool
 
 function startBrainEvenGame(): void
 {
+    $rules = 'Answer "yes" if the number is even, otherwise answer "no".';
     $rounds = 3;
     $gameData = [];
     for ($i = 0; $i < $rounds; $i += 1) {
@@ -20,5 +19,5 @@ function startBrainEvenGame(): void
         $correctAnswer = isEven($randNum) ? 'yes' : 'no';
         $gameData[] = [$randNum, $correctAnswer];
     }
-    startGame(RULES, $gameData);
+    startGame($rules, $gameData);
 }
