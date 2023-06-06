@@ -15,7 +15,7 @@ function startGame(string $rules, array $rounds): void
     foreach ($rounds as $round) {
         [$question, $correctAnswer] = $round;
 
-        line($question);
+        line("Question: %d", $question);
         $userAnswer = prompt("Your answer");
 
         if ($userAnswer === $correctAnswer) {
