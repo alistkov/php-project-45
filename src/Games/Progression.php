@@ -31,7 +31,7 @@ function startBrainProgressionGame(): void
     $gameData = [];
     for ($i = 0; $i < $rounds; $i += 1) {
         [$progression, $missingElement] = createProgression();
-        $question = implode(', ', $progression);
+        $question = implode(' ', $progression);
         $correctAnswer = (string) $missingElement;
         $gameData[] = [$question, $correctAnswer];
     }
