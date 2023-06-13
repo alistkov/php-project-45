@@ -1,6 +1,6 @@
 <?php
 
-namespace BrainGames\Even;
+namespace BrainGames\Calc;
 
 use function BrainGames\Engine\startGame;
 
